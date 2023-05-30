@@ -66,7 +66,7 @@ class ShoppingBasket {
       item.item.price * item.quantity
     }.sum
     val total = this.calculateTotal()
-    var discounts = this.discountsToString()
+    val discounts = this.discountsToString()
     val receipt = s"""|Subtotal: ${priceToString(sumtotal)}
                       |$discounts
                       |Total price: ${priceToString(total)}""".stripMargin
