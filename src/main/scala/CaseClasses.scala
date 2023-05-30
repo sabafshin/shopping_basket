@@ -1,18 +1,18 @@
 package shopping_basket
 
 case class Item(
-    name: String,
-    price: Double
+    var name: String,
+    var price: Double
 )
 
 case class ShoppingItem(
-    item: Item,
+    var item: Item,
     var quantity: Int
 )
 
 case class SpecialOffer(
     var targetItem: Item,
-    description: String,
+    var description: String,
     var count: Int = 0,
-    discount: Double
+    var discount: Double
 )
