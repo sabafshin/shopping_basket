@@ -1,0 +1,35 @@
+{
+	"name": "shopping_basket",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": true,
+				"files.insertFinalNewline": true
+			}
+		}
+	},
+	"remoteUser": "vscode",
+	"features": {
+		"./features/scala": {
+			"version": "3.2.2",
+			"SBT": "1.8.3"
+		},
+		"ghcr.io/devcontainers/features/java": {
+			"installGradle": false,
+			"installMaven": false,
+			"jdkDistro": "tem",
+			"version": "17"
+		},
+		"ghcr.io/devcontainers/features/git": {
+			"version": "latest"
+		}
+	},
+	"portsAttributes": {
+		"0-65535": {
+			"label": "Application",
+			"onAutoForward": "ignore"
+		}
+	}
+}

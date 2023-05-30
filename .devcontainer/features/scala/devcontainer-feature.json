@@ -1,0 +1,48 @@
+{
+    "id": "scala",
+    "version": "1.0.0",
+    "name": "Scala (via SDKMAN!)",
+    "documentationURL": "",
+    "description": "Installs Scala, SDKMAN! (if not installed), and needed dependencies.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none",
+                "3.2.2"
+            ],
+            "default": "none",
+            "description": "Select or enter a Scala version to install"
+        },
+        "SBT": {
+            "type": "string",
+            "default": "none",
+            "proposals": [
+                "latest",
+                "none",
+                "1.8.3"
+            ],
+            "description": "Install Sbt, an interactive build tool for Scala"
+        }
+    },
+    "buildArg": "_VSC_INSTALL_SCALA",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "scala-lang.scala",
+                "scalameta.metals",
+                "scala-lang.scala-snippets"
+            ],
+            "settings": {
+                "metals.sbtScript": "/usr/local/sdkman/candidates/sbt/current/bin/sbt"
+            }
+        }
+    },
+    "containerEnv": {
+        "SDKMAN_DIR": "/usr/local/sdkman",
+        "SCALA_HOME": "/usr/local/sdkman/candidates/scala/current",
+        "SBT_HOME": "/usr/local/sdkman/candidates/sbt/current",
+        "PATH": "/usr/local/sdkman/bin:/usr/local/sdkman/candidates/scala/current/bin:/usr/local/sdkman/candidates/sbt/current/bin:${PATH}"
+    }
+}
