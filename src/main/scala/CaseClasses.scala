@@ -1,3 +1,5 @@
+// author: Afshin Sabahi
+
 package shopping_basket
 
 case class Item(

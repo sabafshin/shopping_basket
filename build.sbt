@@ -1,3 +1,5 @@
+// author: Afshin Sabahi
+
 val scala3Version = "3.2.2"
 
 lazy val root = project
