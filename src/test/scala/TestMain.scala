@@ -52,4 +52,16 @@ class TestPriceBasketSpec extends FunSuite {
       assertEquals(out.toString().trim(), expected.trim())
     }
   }
+
+  test("PriceBasket no items") {
+    withOutputStream { out =>
+      Console.withOut(out) {
+        PriceBasket.main(Array())
+      }
+      val expected = """|Subtotal: 0p
+                        |(No offers available)
+                        |Total price: 0p""".stripMargin
+      assertEquals(out.toString().trim(), expected.trim())
+    }
+  }
 }
