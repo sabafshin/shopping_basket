@@ -25,7 +25,6 @@ The items in the cart can have different prices and discounts.
         - `sbt run [items]`
     - Or `sbt console` to start a Scala 3 REPL.
     - To run the tests `sbt test`
-        - Note: When running the tests using the vscode test runner, 3 of the TestPriceBasketSpec tests will fail. However this is due to the test runner not being able to properly parse the output of the program with the `£` symbol. The tests will pass when ran using terminal with `sbt test`.
 
 ### Running the pre-built jar
 - Make sure you have Java 17 installed
