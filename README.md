@@ -32,17 +32,17 @@ The items in the cart can have different prices and discounts.
     - `sdk install scala 3.2.2`
 - You can find the pre-built jar in the `releases` folder
     - Run the jar with `scala PriceBasket.jar [items]`
-    - Example: `scala PriceBasket.jar Apples Milk Bread`
-
-        ` Subtotal: £3.10`
-
-        ` Apples 10% off: 10p`
-
-        ` Total price: £3.00`
-    - Example with no items: `scala PriceBasket.jar`
-
-        ` Subtotal: £0.00`
-
-        ` (No offers available) `
-
-        ` Total price: £0.00`
+    - Example:
+      ```
+      $> scala PriceBasket.jar Apples Milk Bread
+      Subtotal: £3.10
+      Apples 10% off: 10p
+      Total price: £3.00
+        ```
+    - Example with no items:
+      ```
+      $> scala PriceBasket.jar
+      Subtotal: £0.00
+      (No offers available)
+      Total price: £0.00
+      ```
